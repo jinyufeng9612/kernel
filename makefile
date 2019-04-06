@@ -1,8 +1,4 @@
 #copyright jin
 #begin makefile
-one:
-	echo one
-two:
-	echo two
-three:
-	echo three
+List:database.c
+	gcc database.c -o List

@@ -1,4 +1,5 @@
 #ifndef _DATABASE_H_
+#define _DATABASE_H_
 #include "type.h"
 #include <stdlib.h>
 typedef struct
@@ -13,8 +14,8 @@ typedef struct
     Row L[0];
 }List,*pList;
 
-bool listinit(pList L,int Capcity){
-    L=malloc(sizeof(Row)*(Capcity-1))+sizeof(struct List));
+bool listinit(pList p,int Capcity){
+    p=malloc(sizeof(Row)*(Capcity-1)+sizeof(List));
     if(p!=NULL){
         return true;
     }
